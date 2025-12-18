@@ -1,0 +1,41 @@
+import 'package:flutter/material.dart';
+import 'package:smartbudget/core/theme/text_styles.dart';
+import 'package:smartbudget/core/utils/cubit/home_cubit.dart';
+
+class RegisterButton extends StatelessWidget {
+  final GlobalKey<FormState> formKey;
+  final bool isLoading;
+
+  const RegisterButton({
+    super.key,
+    required this.formKey,
+    required this.isLoading,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: double.infinity,
+      child: ElevatedButton(
+        onPressed: isLoading
+            ? null
+            : () {
+                if (formKey.currentState!.validate()) {
+                  homeCubit.register();
+                }
+              },
+        style: ElevatedButton.styleFrom(
+          padding: const EdgeInsets.symmetric(vertical: 14),
+        ),
+        child: isLoading
+            ? const CircularProgressIndicator()
+            : Text(
+                'Register',
+                style: TextStylesManager.regular16.copyWith(
+                  color: Colors.white,
+                ),
+              ),
+      ),
+    );
+  }
+}

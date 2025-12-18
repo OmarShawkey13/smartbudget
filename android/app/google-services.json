@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "897537632000",
+    "project_id": "smartbudgt-61a71",
+    "storage_bucket": "smartbudgt-61a71.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897537632000:android:3dcc52d7191f5467f235e5",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzFwvlN_kZVzSUdqwCHcT8fpD6yguV_ig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897537632000:android:44bb0ec64ff5f8f8f235e5",
+        "android_client_info": {
+          "package_name": "com.smartbudget"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzFwvlN_kZVzSUdqwCHcT8fpD6yguV_ig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
