@@ -30,27 +30,6 @@ class UserRepository {
     return UserModel.fromMap(doc.data() as Map<String, dynamic>, uid);
   }
 
-  Future<void> followUser(String currentUserId, String userIdToFollow) async {
-    await users.doc(currentUserId).update({
-      'following': FieldValue.arrayUnion([userIdToFollow]),
-    });
-    await users.doc(userIdToFollow).update({
-      'followers': FieldValue.arrayUnion([currentUserId]),
-    });
-  }
-
-  Future<void> unfollowUser(
-    String currentUserId,
-    String userIdToUnfollow,
-  ) async {
-    await users.doc(currentUserId).update({
-      'following': FieldValue.arrayRemove([userIdToUnfollow]),
-    });
-    await users.doc(userIdToUnfollow).update({
-      'followers': FieldValue.arrayRemove([currentUserId]),
-    });
-  }
-
   /// -----------------------------
   /// CHECK IF USER EXISTS
   /// -----------------------------
