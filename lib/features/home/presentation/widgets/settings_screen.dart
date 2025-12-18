@@ -80,6 +80,7 @@ class SettingsScreen extends StatelessWidget {
                   if (context.mounted) {
                     context.pushReplacement<Object>(Routes.login);
                   }
+                  homeCubit.currentIndex = 0;
                 },
               ),
             ],
