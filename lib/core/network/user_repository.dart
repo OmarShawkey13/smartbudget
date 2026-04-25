@@ -30,6 +30,12 @@ class UserRepository {
     return UserModel.fromMap(doc.data() as Map<String, dynamic>, uid);
   }
 
+<<<<<<< HEAD
+=======
+  /// -----------------------------
+  /// CHECK IF USER EXISTS
+  /// -----------------------------
+>>>>>>> b24109de525642d614397bedbd6ff3c06475476a
   Future<bool> userExists(String uid) async {
     final doc = await users.doc(uid).get();
     return doc.exists;
